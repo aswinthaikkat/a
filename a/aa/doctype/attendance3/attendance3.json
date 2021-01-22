@@ -1,0 +1,98 @@
+{
+ "creation": "2020-12-28 22:21:13.284044",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "e_email",
+  "e_date",
+  "e_time",
+  "e_presence",
+  "e_datetime"
+ ],
+ "fields": [
+  {
+   "fieldname": "e_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "E_email",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "e_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "E_date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "e_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "E_time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "e_presence",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "E_presence",
+   "options": "Present\nAbsent",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "e_datetime",
+   "fieldtype": "Datetime",
+   "label": "E_datetime",
+   "reqd": 1
+  }
+ ],
+ "modified": "2021-01-01 21:33:55.084890",
+ "modified_by": "Administrator",
+ "module": "aa",
+ "name": "Attendance3",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verify",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

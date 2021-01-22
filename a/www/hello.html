@@ -1,0 +1,41 @@
+
+{% if frappe.session.user == 'Guest' %}
+<h1>Attendance Details</h1>
+<h2>Please Log In to view details</h2>
+{% elif frappe.session.user == 'verify@gmail.com' %}
+<table border="1" > 
+    <tr>
+        <th>Employee</td>
+        <th>Date</td>
+        <th>Time</td>
+        <th>Presence</td>
+    </tr>
+    {% for b in x %}
+    <tr>
+        <td>{{b.e_email}}</td>
+        <td>{{b.e_date}}</td>
+        <td>{{frappe.utils.get_datetime(b.e_datetime).strftime("%H:%M")}}</td>
+        <td>{{b.e_presence}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h1>Attendance Profile</h1>
+<h2>{{name}}</h2>
+<table border="1" > 
+    <tr>
+        <th>Employee</td>
+        <th>Date</td>
+        <th>Time</td>
+        <th>Presence</td>
+    </tr>
+    {% for a in attendances %}
+    <tr>
+        <td>{{name}}1</td>
+        <td>{{a.e_date}}</td>
+        <td>{{frappe.utils.get_datetime(a.e_datetime).strftime("%H:%M")}}</td>
+        <td>{{a.e_presence}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
